@@ -14,7 +14,7 @@ h1 {
     animation: bounce 2s infinite;
 }
 button {
-    background-color: #FFB6C1;
+    background-color: #920d21;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -87,15 +87,15 @@ button:hover {
 }
 #message {
     font-family: 'Lobster', cursive;
-    font-size: 2em;
+    font-size: 5em;
     font-weight: bold;
     animation: textFocus 2s infinite;
 }
 
 @keyframes textFocus {
-    0% {color: black;}
-    50% {color: #FFB6C1; transform: scale(1.1);}
-    100% {color: black;}
+    0% {color: rgb(206, 15, 8);}
+    50% {color: #c34457; transform: scale(1.1);}
+    100% {color: rgb(158, 12, 12);}
 }
 
 @keyframes bloom {
@@ -109,9 +109,9 @@ body {
     background-position: center;
 }
 @keyframes borderAnimation {
-    0%   {border-color: red;}
-    50%  {border-color: blue;}
-    100% {border-color: red;}
+    0%   {border-color: rgb(6, 173, 123);}
+    50%  {border-color: rgb(128, 128, 220);}
+    100% {border-color: rgb(222, 98, 98);}
 }
 
 body {
@@ -141,9 +141,9 @@ body:before {
 }
 
 @keyframes borderAnimation {
-    0%   {border-color: red;}
-    50%  {border-color: blue;}
-    100% {border-color: red;}
+    0%   {border-color: rgba(27, 184, 158, 0.616);}
+    50%  {border-color: rgb(172, 12, 220);}
+    100% {border-color: rgb(235, 79, 79);}
 }
 @keyframes fadeInOut {
     0% { opacity: 0; }
