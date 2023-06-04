@@ -1,0 +1,161 @@
+body {
+    background-color: #FBD1A2;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding-top: 20%;
+}
+
+h1 {
+    color: #FF6B6B;
+    text-shadow: 2px 2px #FFC0CB;
+    animation: bounce 2s infinite;
+}
+button {
+    background-color: #FFB6C1;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFC0CB;
+    color: black;
+    transform: scale(1.1);
+}
+button:hover {
+    background-color: #FFC0CB;
+    color: black;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 0 auto;
+    animation: heartbeat 1s infinite;
+}
+/*
+.heart div {
+    position: absolute;
+    width: 52px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+}
+
+.heart div:nth-child(1) {
+    left: 50px;
+    transform: rotate(-45deg);
+}
+
+.heart div:nth-child(2) {
+    left: 50px;
+    transform: rotate(45deg);
+}
+
+.heart div:nth-child(3) {
+    top: 30px;
+    width: 52px;
+    height: 52px;
+    left: 24px;
+    border-radius: 50%;
+    background: white;
+}*/
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+#message {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    animation: textFocus 2s infinite;
+}
+
+@keyframes textFocus {
+    0% {color: black;}
+    50% {color: #FFB6C1; transform: scale(1.1);}
+    100% {color: black;}
+}
+
+@keyframes bloom {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+}
+body {
+    background-image: url('https://i.imgloc.com/2023/06/04/VCl24P.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@keyframes borderAnimation {
+    0%   {border-color: red;}
+    50%  {border-color: blue;}
+    100% {border-color: red;}
+}
+
+body {
+    border: 5px solid red;
+    animation: borderAnimation 2s infinite;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #fff;
+    overflow: hidden;
+    animation: borderAnimation 2s infinite;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: -5px; 
+    left: -5px;
+    right: -5px; 
+    bottom: -5px;
+    background: url(https://i.imgloc.com/2023/06/04/VCl24P.jpeg);
+    border: 5px solid red;
+    z-index: -1;
+}
+
+@keyframes borderAnimation {
+    0%   {border-color: red;}
+    50%  {border-color: blue;}
+    100% {border-color: red;}
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  #fullScreenImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeInOut 2s;
+  }
