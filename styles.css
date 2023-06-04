@@ -14,7 +14,7 @@ h1 {
     animation: bounce 2s infinite;
 }
 button {
-    background-color: #06c4f4;
+    background-color: #5bbed7;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -103,7 +103,7 @@ button:hover {
     50% {transform: scale(1.2);}
 }
 body {
-    background-image: url('https://i.imgloc.com/2023/06/04/VCH2AU.jpeg');
+    background-image: url('https://i.imgloc.com/2023/06/04/VCHxZX.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -135,7 +135,7 @@ body:before {
     left: -5px;
     right: -5px; 
     bottom: -5px;
-    background: url(https://i.imgloc.com/2023/06/04/VCH2AU.jpeg);
+    background: url(https://i.imgloc.com/2023/06/04/VCHxZX.jpeg);
     border: 5px solid red;
     z-index: -1;
 }
