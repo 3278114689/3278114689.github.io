@@ -10,11 +10,11 @@ body {
 
 h1 {
     color: #FF6B6B;
-    text-shadow: 2px 2px #FFC0CB;
+    text-shadow: 2px 2px #0579bd;
     animation: bounce 2s infinite;
 }
 button {
-    background-color: #920d21;
+    background-color: #06c4f4;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -93,9 +93,9 @@ button:hover {
 }
 
 @keyframes textFocus {
-    0% {color: rgb(219, 230, 10);}
+    0% {color: rgb(10, 150, 237);}
     50% {color: #0de2ea; transform: scale(1.1);}
-    100% {color: rgb(110, 6, 237);}
+    100% {color: rgb(16, 187, 239);}
 }
 
 @keyframes bloom {
