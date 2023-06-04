@@ -93,9 +93,9 @@ button:hover {
 }
 
 @keyframes textFocus {
-    0% {color: rgb(206, 15, 8);}
-    50% {color: #c34457; transform: scale(1.1);}
-    100% {color: rgb(158, 12, 12);}
+    0% {color: rgb(219, 230, 10);}
+    50% {color: #0de2ea; transform: scale(1.1);}
+    100% {color: rgb(110, 6, 237);}
 }
 
 @keyframes bloom {
