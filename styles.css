@@ -135,7 +135,7 @@ body:before {
     left: -5px;
     right: -5px; 
     bottom: -5px;
-    background: url( https://55669.oss-cn-beijing.aliyuncs.com/9a4e0b7a6695faa9504aad56fa1838881696729635956.jpeg);
+    background: url(https://55669.oss-cn-beijing.aliyuncs.com/Screenshot_2023-09-21-10-20-33-08_e39d2c7de19156b0683cd93e8735f348.jpg);
     border: 5px solid red;
     z-index: -1;
 }
