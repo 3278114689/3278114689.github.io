@@ -103,7 +103,7 @@ button:hover {
     50% {transform: scale(1.2);}
 }
 body {
-    background-image: url('https://55669.oss-cn-beijing.aliyuncs.com/9a4e0b7a6695faa9504aad56fa1838881696729635956.jpeg');
+    background-image: url('https://55669.oss-cn-beijing.aliyuncs.com/3c0f97cb15028dc4a2ea77c5ef4afc8c1698121936701.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -135,7 +135,7 @@ body:before {
     left: -5px;
     right: -5px; 
     bottom: -5px;
-    background: url( https://55669.oss-cn-beijing.aliyuncs.com/IMG20230904185744.jpg);
+    background: url( https://55669.oss-cn-beijing.aliyuncs.com/3c0f97cb15028dc4a2ea77c5ef4afc8c1698121936701.jpeg);
     border: 5px solid red;
     z-index: -1;
 }
