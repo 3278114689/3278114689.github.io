@@ -1,31 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <title>空头</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打飞机小游戏</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>自定义语句</h1>
-        <button id="encouragement">按钮</button>
-<div id="container">
-    <div id="message"></div>
-    <div id="flowers"></div>
-</div>
-        <p id="message"></p>
-        <div class="heart">
-          <div class="rose"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <audio controls autoplay loop>
-          <source src="
-          https://55669.oss-cn-beijing.aliyuncs.com/Queen%20-%20Love%20Of%20My%20Life.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-    </div>
-    <script src="script.js"></script>
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let playerX = 240;
+        let playerY = 280;
+        let playerWidth = 50;
+        let playerHeight = 50;
+        let playerSpeed = 5;
+
+        let bullets = [];
+        let enemyPlanes = [];
+
+        function drawPlayer() {
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
+        }
+
+        function drawBullets() {
+            ctx.fillStyle = 'red';
+            bullets.forEach(bullet => {
+                ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+            });
+        }
+
+        function drawEnemyPlanes() {
+            ctx.fillStyle = 'green';
+            enemyPlanes.forEach(enemyPlane => {
+                ctx.fillRect(enemyPlane.x, enemyPlane.y, enemyPlane.width, enemyPlane.height);
+            });
+        }
+
+        function update() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPlayer();
+            drawBullets();
+            drawEnemyPlanes();
+            requestAnimationFrame(update);
+        }
+
+        function move(e) {
+            if (e.key === 'ArrowRight' && playerX < canvas.width - playerWidth) {
+                playerX += playerSpeed;
+            } else if (e.key === 'ArrowLeft' && playerX > 0) {
+                playerX -= playerSpeed;
+            } else if (e.key === ' ') {
+                bullets.push({ x: playerX + playerWidth / 2 - 2.5, y: playerY, width: 5, height: 10 });
+            }
+        }
+
+        function generateEnemyPlane() {
+            let x = Math.random() * (canvas.width - 50);
+            let y = -50;
+            enemyPlanes.push({ x, y, width: 50, height: 50 });
+        }
+
+        function moveEnemyPlanes() {
+            enemyPlanes.forEach(enemyPlane => {
+                enemyPlane.y += 2;
+                if (enemyPlane.y > canvas.height) {
+                    enemyPlanes = enemyPlanes.filter(p => p !== enemyPlane);
+                }
+            });
+        }
+
+        function moveBullets() {
+            bullets.forEach(bullet => {
+                bullet.y -= 5;
+                if (bullet.y < 0) {
+                    bullets = bullets.filter(b => b !== bullet);
+                }
+            });
+        }
+
+        function checkCollision() {
+            bullets.forEach((bullet, bulletIndex) => {
+                enemyPlanes.forEach((enemyPlane, enemyPlaneIndex) => {
+                    if (bullet.x < enemyPlane.x + enemyPlane.width &&
+                        bullet.x + bullet.width > enemyPlane.x &&
+                        bullet.y < enemyPlane.y + enemyPlane.height &&
+                        bullet.y + bullet.height > enemyPlane.y) {
+                        bullets.splice(bulletIndex, 1);
+                        enemyPlanes.splice(enemyPlaneIndex, 1);
+                    }
+                });
+            });
+        }
+
+        setInterval(generateEnemyPlane, 1000);
+        setInterval(moveEnemyPlanes, 1000 / 60);
+        setInterval(moveBullets, 1000 / 60);
+        setInterval(checkCollision, 1000 / 60);
+        window.addEventListener('keydown', move);
+        update();
+    </script>
 </body>
 </html>
