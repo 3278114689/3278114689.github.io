@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (direction === 'next') {
             mediaPlayer.currentIndex = (mediaPlayer.currentIndex + 1) % mediaPlayer.tracks.length;
         } else if (direction === 'prev') {
-            mediaPlayer.currentIndex = (mediaPlayer.currentIndex - 1 + mediaPlayer.tracks.length ) % mediPplayer.tracks.length;
+            mediaPlayer.currentIndex = (mediaPlayer.currentIndex - 1 + mediaPlayer.tracks.length ) % mediaPlayer.tracks.length;
         }        mediaPlayer.loadTrack(mediaPlayer.currentIndex );
     }
     // 添加按钮事件监听
