@@ -84,10 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const textOverlay = document.getElementById('text-overlay');
         imageContainer.classList.toggle('flipped');
         textOverlay.classList.toggle('flipped');
+        
     }
     
     // 为图片添加点击事件监听
     document.getElementById('media-image-container').addEventListener('click', toggleFlipImage);
+    // 为文本添加点击事件监听
+    document.getElementById('text-overlay').addEventListener('click', toggleFlipImage);
+
 
     // 处理切换到上一张或下一张图片和音乐
     function changeTrack(direction) {
