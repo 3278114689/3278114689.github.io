@@ -1,111 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>打飞机小游戏</title>
-    <style>
-        canvas {
-            border: 1px solid black;
-        }
-    </style>
+    <title>滑动图片音乐播放器</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas id="gameCanvas" width="480" height="320"></canvas>
-    <script>
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
+    <div id="media-player">
+        <div id="media-image-container">
+            <!-- 图片会被动态插入 -->
+        </div>
+        <audio id="media-audio" preload="none" controls>
+            <!-- 音乐源会被动态设置 -->
+        </audio>
+        <button id="btn-prev">上一张</button>
+        <button id="btn-next">下一张</button>
+    </div>
+    <div id="text-overlay" class="hidden"></div>
 
-        let playerX = 240;
-        let playerY = 280;
-        let playerWidth = 50;
-        let playerHeight = 50;
-        let playerSpeed = 5;
-
-        let bullets = [];
-        let enemyPlanes = [];
-
-        function drawPlayer() {
-            ctx.fillStyle = 'blue';
-            ctx.fillRect(playerX, playerY, playerWidth, playerHeight);
-        }
-
-        function drawBullets() {
-            ctx.fillStyle = 'red';
-            bullets.forEach(bullet => {
-                ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
-            });
-        }
-
-        function drawEnemyPlanes() {
-            ctx.fillStyle = 'green';
-            enemyPlanes.forEach(enemyPlane => {
-                ctx.fillRect(enemyPlane.x, enemyPlane.y, enemyPlane.width, enemyPlane.height);
-            });
-        }
-
-        function update() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            drawPlayer();
-            drawBullets();
-            drawEnemyPlanes();
-            requestAnimationFrame(update);
-        }
-
-        function move(e) {
-            if (e.key === 'ArrowRight' && playerX < canvas.width - playerWidth) {
-                playerX += playerSpeed;
-            } else if (e.key === 'ArrowLeft' && playerX > 0) {
-                playerX -= playerSpeed;
-            } else if (e.key === ' ') {
-                bullets.push({ x: playerX + playerWidth / 2 - 2.5, y: playerY, width: 5, height: 10 });
-            }
-        }
-
-        function generateEnemyPlane() {
-            let x = Math.random() * (canvas.width - 50);
-            let y = -50;
-            enemyPlanes.push({ x, y, width: 50, height: 50 });
-        }
-
-        function moveEnemyPlanes() {
-            enemyPlanes.forEach(enemyPlane => {
-                enemyPlane.y += 2;
-                if (enemyPlane.y > canvas.height) {
-                    enemyPlanes = enemyPlanes.filter(p => p !== enemyPlane);
-                }
-            });
-        }
-
-        function moveBullets() {
-            bullets.forEach(bullet => {
-                bullet.y -= 5;
-                if (bullet.y < 0) {
-                    bullets = bullets.filter(b => b !== bullet);
-                }
-            });
-        }
-
-        function checkCollision() {
-            bullets.forEach((bullet, bulletIndex) => {
-                enemyPlanes.forEach((enemyPlane, enemyPlaneIndex) => {
-                    if (bullet.x < enemyPlane.x + enemyPlane.width &&
-                        bullet.x + bullet.width > enemyPlane.x &&
-                        bullet.y < enemyPlane.y + enemyPlane.height &&
-                        bullet.y + bullet.height > enemyPlane.y) {
-                        bullets.splice(bulletIndex, 1);
-                        enemyPlanes.splice(enemyPlaneIndex, 1);
-                    }
-                });
-            });
-        }
-
-        setInterval(generateEnemyPlane, 1000);
-        setInterval(moveEnemyPlanes, 1000 / 60);
-        setInterval(moveBullets, 1000 / 60);
-        setInterval(checkCollision, 1000 / 60);
-        window.addEventListener('keydown', move);
-        update();
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
