@@ -7,57 +7,57 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/rh.jpg', // 填入第一张图片的URL
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Creep-Radiohead.mp3', // 填入第一首音乐的URL
-                text: 'Creep-Radiohead'
+                text: 'Creep-Radiohead,收录于他们1993年的专辑《Pablo Honey》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/eag.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Hotel%20California-Eagles.mp3', // 确保路径正确
-                text: 'Hotel California-Eagles'
+                text: 'Hotel California-Eagles,收录于他们1976年的专辑《Hotel California》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/STROKE.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/I%27ll%20Try%20Anything%20Once%20.mp3', // 确保路径正确
-                text: 'I’ll Try Anything Once-Strokes'
+                text: 'I’ll Try Anything Once-Strokes,收录于他们1994年的专辑《Glee》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/SQU.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/She%27ll%20Make%20You%20Cry-The%20Velvet%20Underground.mp3', // 确保路径正确
-                text: 'She’ll Make You Cry-The Velvet Underground'
+                text: 'She’ll Make You Cry-The Velvet Underground,收录于他们1969年的专辑《The Velvet Underground and Nico》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/VELVET.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/What%20Goes%20On-The%20Velvet%20Underground.mp3', // 确保路径正确
-                text: 'What Goes On-The Velvet Underground'
+                text: 'What Goes On-The Velvet Underground,收录于他们1967年的专辑《The Velvet Underground》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/BTS.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/When%20I%27m%20Sixty%20Four-.mp3', // 确保路径正确
-                text: 'When I’m Sixty Four-The Beatles'
+                text: 'When I’m Sixty Four-The Beatles,收录于他们1964年的专辑《Sgt. Pepper’s Lonely Hearts Club Band》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/DAY.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/%C2%A1Viva%20La%20Gloria-Green%20Day.mp3', // 确保路径正确
-                text: 'Viva La Gloria-Green Day'
+                text: 'Viva La Gloria-Green Day,收录于他们1990年的专辑《Dookie》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/br.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/If-Bread.mp3', // 确保路径正确
-                text: 'If-Bread'
+                text: 'If-Bread,收录于他们1992年的专辑《Bread-II》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/GREEN.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Green%20is%20the%20Colour-Pink%20Floyd.mp3', // 确保路径正确
-                text: 'Green is the Colour-Pink Floyd'
+                text: 'Green is the Colour-Pink Floyd,收录于他们1970年的专辑《More》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/BOY.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Wouldn%27t%20It%20Be%20Nice-The%20Beach%20Boys.mp3', // 确保路径正确
-                text: 'Wouldn’t It Be Nice-The Beach Boys'
+                text: 'Wouldn’t It Be Nice-The Beach Boys,收录于他们1966年的专辑《Pet Sounds》中。'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/sem.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/My%20Hero-Sean%20Lennon%2CKarla%20Moheno.mp3', // 确保路径正确
-                text: 'My Hero-Sean Lennon,Karla Moheno'
+                text: 'My Hero-Sean Lennon,Karla Moheno,收录于他们2011年的专辑《Born to Die》中。'
             },
             
             // 若要添加更多轨道，继续以相同方式添加对象
