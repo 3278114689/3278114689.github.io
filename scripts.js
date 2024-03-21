@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/STROKE.jpg', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/I%27ll%20Try%20Anything%20Once%20.mp3', // 确保路径正确
-                text: 'I’ll Try Anything Once'
+                text: 'I’ll Try Anything Once-Strokes'
             },
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/SQU.jpg', // 确保路径正确
