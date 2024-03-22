@@ -59,6 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/My%20Hero-Sean%20Lennon%2CKarla%20Moheno.mp3', // 确保路径正确
                 text: 'My Hero-Sean Lennon,Karla Moheno,收录于他们2011年的专辑《Born to Die》中。'
             },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/r8.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Purple%20Rain-Prince%2CThe%20Revolution.mp3', // 确保路径正确
+                text: 'Purple Rain-Prince,The Revolution,收录于他们1984年的专辑《Purple Rain》中。'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/baoye.jpg', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Space%20Oddity-David%20Bowie.mp3', // 确保路径正确
+                text: 'Space Oddity-David Bowie,收录于他1976年的专辑《changesOneBowie》中。'
+            },
             
             // 若要添加更多轨道，继续以相同方式添加对象
         ],
@@ -105,3 +115,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btn-prev').addEventListener('click', () => changeTrack('prev'));
     document.getElementById('btn-next').addEventListener('click', () => changeTrack('next'));
 });
+
