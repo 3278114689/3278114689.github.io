@@ -51,7 +51,8 @@ button {
 
 }
 
-.container {
+/* 把按钮放在另一个盒子里 */
+.container {      
     display: flex;
 }
 
