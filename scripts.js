@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Space Oddity-David Bowie,收录于他1976年的专辑《changesOneBowie》中。'
             },
             
-            // 若要添加更多轨道，继续以相同方式添加对象
+            // 添加更多轨道，继续以相同方式添加对象
         ],
         loadTrack(index) {
             if (index >= 0 && index < this.tracks.length ) {
@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.currentIndex = index;
             }
         },
-        // 更多函数将在这里实现...
     };
 
     // 初始化第一首曲目
@@ -115,4 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btn-prev').addEventListener('click', () => changeTrack('prev'));
     document.getElementById('btn-next').addEventListener('click', () => changeTrack('next'));
 });
+
+
 
