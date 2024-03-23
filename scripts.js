@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex: 0,
         tracks: [
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/rh.jpg', // 填入第一张图片的URL
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/rh.gif', // 填入第一张图片的URL
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Creep-Radiohead.mp3', // 填入第一首音乐的URL
                 text: 'Creep-Radiohead,收录于他们1993年的专辑《Pablo Honey》中。'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/eag.jpg', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/eag.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Hotel%20California-Eagles.mp3', // 确保路径正确
                 text: 'Hotel California-Eagles,收录于他们1976年的专辑《Hotel California》中。'
             },
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'What Goes On-The Velvet Underground,收录于他们1967年的专辑《The Velvet Underground》中。'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/BTS.jpg', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/BTS.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/When%20I%27m%20Sixty%20Four-.mp3', // 确保路径正确
                 text: 'When I’m Sixty Four-The Beatles,收录于他们1964年的专辑《Sgt. Pepper’s Lonely Hearts Club Band》中。'
             },
