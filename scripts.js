@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'What Goes On-The Velvet Underground,收录于他们1967年的专辑《The Velvet Underground》中。'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/BTS.gif', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/newBTS.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/When%20I%27m%20Sixty%20Four-.mp3', // 确保路径正确
                 text: 'When I’m Sixty Four-The Beatles,收录于他们1964年的专辑《Sgt. Pepper’s Lonely Hearts Club Band》中。'
             },
