@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/muse.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Unintended-Muse.mp3', // 确保路径正确
-                text: 'Space Oddity-David Bowie,收录于他1976年的专辑《changesOneBowie》中。'
+                text: 'Unintended-Muse,收录于他们1999年的专辑《Showbiz》中。'
             },
             
             // 添加更多轨道，继续以相同方式添加对象
