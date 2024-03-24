@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'I’ll Try Anything Once-Strokes,收录于他们1994年的专辑《Glee》中。'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/SQU.jpg', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/sirong.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/She%27ll%20Make%20You%20Cry-The%20Velvet%20Underground.mp3', // 确保路径正确
                 text: 'She’ll Make You Cry-The Velvet Underground,收录于他们1969年的专辑《The Velvet Underground and Nico》中。'
             },
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'If-Bread,收录于他们1992年的专辑《Bread-II》中。'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/GREEN.jpg', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/GREEN.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Green%20is%20the%20Colour-Pink%20Floyd.mp3', // 确保路径正确
                 text: 'Green is the Colour-Pink Floyd,收录于他们1970年的专辑《More》中。'
             },
@@ -65,8 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Purple Rain-Prince,The Revolution,收录于他们1984年的专辑《Purple Rain》中。'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/baoye.jpg', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/dabao.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Space%20Oddity-David%20Bowie.mp3', // 确保路径正确
+                text: 'Space Oddity-David Bowie,收录于他1976年的专辑《changesOneBowie》中。'
+            },
+            
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/muse.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Unintended-Muse.mp3', // 确保路径正确
                 text: 'Space Oddity-David Bowie,收录于他1976年的专辑《changesOneBowie》中。'
             },
             
