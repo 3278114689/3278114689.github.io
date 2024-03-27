@@ -67,13 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/dabao.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Space%20Oddity-David%20Bowie.mp3', // 确保路径正确
-                text: 'Space Oddity-David Bowie,收录于他1976年的专辑《changesOneBowie》中。'
+                text: 'Space Oddity-David Bowie,收录于他1976年的专辑《ChangesOneBowie》中。'
             },
             
             {
                 image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/muse.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Unintended-Muse.mp3', // 确保路径正确
                 text: 'Unintended-Muse,收录于他们1999年的专辑《Showbiz》中。'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Steven.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/You%20Are%20The%20Sunshine%20Of%20My%20Life-Stevie%20Wonder.mp3', // 确保路径正确
+                text: 'You Are The Sunshine Of My Life-Stevie Wonder,收录于他1972年的专辑《Talking Book》中。'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/luysi.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Oops-Louis%20Armstrong%2CElla%20Fitzgerald.mp3', // 确保路径正确
+                text: 'Oops-Louis Armstrong & Ella Fitzgerald,收录于他1952年的专辑《Ella and Louis》中。'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/cowboy.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Lonesome%20Cowboy%20Bill-The%20Velvet%20Underground.mp3', // 确保路径正确
+                text: 'Lonesome Cowboy Bill-The Velvet Underground,收录于他们1969年的专辑《Loaded》中。'
             },
             
             // 添加更多轨道，继续以相同方式添加对象
