@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Wouldn’t It Be Nice-The Beach Boys,收录于他们1966年的专辑《Pet Sounds》中。'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/sem.jpg', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/her.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/My%20Hero-Sean%20Lennon%2CKarla%20Moheno.mp3', // 确保路径正确
                 text: 'My Hero-Sean Lennon,Karla Moheno,收录于他们2011年的专辑《Born to Die》中。'
             },
