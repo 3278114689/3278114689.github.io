@@ -143,5 +143,5 @@ function playSound() {
 }
 
 document.getElementById('myButton').addEventListener('click', function() {
-    window.location.href = '../page2/new-page.html'; // 替换为你要跳转的页面地址
+    window.location.href = './page2/new-page.html'; // 替换为你要跳转的页面地址
 });
