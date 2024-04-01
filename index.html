@@ -14,12 +14,15 @@
         <audio id="media-audio" autoplay preload="none" controls>
             <!-- 音乐源会被动态设置 -->
         </audio>
-        <div class="container">
-        <button id="btn-prev">⏮</button>
-        <button id="btn-next">⏭</button>
+        <div class="container" onclick="playSound()">
+        <button id="btn-prev" class="button">⏮</button>
+        <button id="btn-next" class="button">⏭</button>
         </div>
+        <div><button id="myButton" class="ab">Ⓜ</button></div>
+        <audio id="clickSound" src="./mt/button.wav"></audio>
     </div>
     <div id="text-overlay" class="hidden"></div>
+
 
     <script src="scripts.js"></script>
 </body>

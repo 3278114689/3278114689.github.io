@@ -137,4 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+function playSound() {
+    const clickSound = document.getElementById('clickSound');
+    clickSound.play();
+}
 
+document.getElementById('myButton').addEventListener('click', function() {
+    window.location.href = '../page2/new-page.html'; // 替换为你要跳转的页面地址
+});

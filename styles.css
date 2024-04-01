@@ -145,9 +145,20 @@ html, body {
     display: flex;
 }
 
+.ab {
+    color: #ffffff; /* 文本颜色改为白色以便与立体背景相对比 */
+    background-color: #555; /* 修改为中立的背景颜色 */
+
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* 将边框半径设置为50%，使按钮变成圆形 */
+    position: absolute; /* 设置按钮为绝对定位 */
+    right: 0; /* 将按钮移动到页面的右边缘 */
+}
+
 
 /* 更新按钮的基础样式 */
-button {
+.button {
     padding: 15px 30px;
     margin: 10px 30px;
     font-size: 1.5em;
