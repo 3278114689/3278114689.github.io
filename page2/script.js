@@ -46,7 +46,7 @@ function appendNewCard() {
 }
 
 // first 5 cards
-for (let i = 0; i < 12; i++) {
+for (let i = 0; i < 6; i++) {
   appendNewCard();
 }
 

@@ -90,6 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Lonesome%20Cowboy%20Bill-The%20Velvet%20Underground.mp3', // 确保路径正确
                 text: 'Lonesome Cowboy Bill-The Velvet Underground,收录于他们1969年的专辑《Loaded》中。'
             },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/a%20wh.jpg', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/A%20Whiter%20Shade%20Of%20Pale-Procol%20Harum.mp3', // 确保路径正确
+                text: 'A Whiter Shade Of Pale-Procol Harum'
+            },
             
             // 添加更多轨道，继续以相同方式添加对象
         ],
