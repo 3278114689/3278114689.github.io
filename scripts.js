@@ -95,6 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/A%20Whiter%20Shade%20Of%20Pale-Procol%20Harum.mp3', // 确保路径正确
                 text: 'A Whiter Shade Of Pale-Procol Harum'
             },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/AK.jpg', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Alcohol-The%20Kinks.mp3', // 确保路径正确
+                text: 'Alcohol-The Kinks'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/QUEEN.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Keep%20Yourself%20Alive-Queen.mp3', // 确保路径正确
+                text: 'Keep Yourself Alive-Queen'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/RB.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Roundabout%202008%20Remaster-Yes.mp3', // 确保路径正确
+                text: 'Roundabout-Yes'
+            },
             
             // 添加更多轨道，继续以相同方式添加对象
         ],
