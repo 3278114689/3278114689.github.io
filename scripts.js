@@ -110,6 +110,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Roundabout%202008%20Remaster-Yes.mp3', // 确保路径正确
                 text: 'Roundabout-Yes'
             },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/aibilu.jpg', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Here%20Comes%20The%20Sun%20Remastered-The%20Beatles.mp3', // 确保路径正确
+                text: 'Here Comes The Sun-The Beatles'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/vegl.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Velvet%20Goldmine-David%20Bowie.mp3', // 确保路径正确
+                text: 'Velvet Goldmine-David Bowie'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/bite.jpg', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Another%20One%20Bites%20The%20Dust-Queen.mp3', // 确保路径正确
+                text: 'Another One Bites The Dust-Queen'
+            },
+            {
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/kc.gif', // 确保路径正确
+                music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Book%20of%20Saturday-King%20Crimson.mp3', // 确保路径正确
+                text: 'Book of Saturday-King Crimson'
+            },
             
             // 添加更多轨道，继续以相同方式添加对象
         ],
