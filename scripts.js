@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Here Comes The Sun-The Beatles'
             },
             {
-                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/vegl.gif', // 确保路径正确
+                image: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/1712987672137.gif', // 确保路径正确
                 music: 'https://u696.oss-cn-hangzhou.aliyuncs.com/PE/Velvet%20Goldmine-David%20Bowie.mp3', // 确保路径正确
                 text: 'Velvet Goldmine-David Bowie'
             },
