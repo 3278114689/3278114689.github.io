@@ -37,7 +37,7 @@ function startConfetti() {
     }
     // 添加 CSS 动画
     confettiContainer.style.display = 'block';
-    confettiContainer.style.animation = 'confetti-fall 3s linear 15 forwards';
+    confettiContainer.style.animation = 'confetti-fall 5s linear 30 forwards';
 }
 
 // 爱心动画函数
@@ -53,7 +53,7 @@ function startHearts() {
     }
     // 添加 CSS 动画
     heartsContainer.style.display = 'block';
-    heartsContainer.style.animation = 'heart-fall 3s linear 15 forwards';
+    heartsContainer.style.animation = 'heart-fall 5s linear 30 forwards';
 }
 
 // 添加一些基本的 CSS 动画样式
@@ -63,23 +63,23 @@ document.write(`
             position: absolute;
             top: 0;
             opacity: 0;
-            animation: confetti-fall 1s linear 16 forwards;
+            animation: confetti-fall 5s linear 16 forwards;
         }
         .heart {
             position: absolute;
             top: 0;
             opacity: 0;
-            animation: heart-fall 1s linear 16 forwards;
+            animation: heart-fall 5s linear 16 forwards;
         }
         @keyframes confetti-fall {
             to {
-                transform: translateY(66vh);
+                transform: translateY(80vh);
                 opacity: 1;
             }
         }
         @keyframes heart-fall {
             to {
-                transform: translateY(66vh);
+                transform: translateY(80vh);
                 opacity: 1;
             }
         }
