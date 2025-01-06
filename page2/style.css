@@ -99,4 +99,34 @@ body {
   50% {
     opacity: 1;
   }
+  
 }
+        /* 3D 圆形按钮样式 */
+        #jumpButton {
+          position: fixed;
+          bottom: 20px; /* 距离底部20px */
+          right: 20px; /* 距离右侧20px */
+          width: 60px; /* 按钮宽度 */
+          height: 60px; /* 按钮高度 */
+          background-color: #333;
+          color: white;
+          border: none;
+          border-radius: 50%; /* 使按钮成为圆形 */
+          cursor: pointer;
+          font-size: 16px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 添加阴影以模拟3D效果 */
+          transition: transform 0.2s, box-shadow 0.2s; /* 平滑过渡效果 */
+      }
+
+      /* 按钮悬停样式 */
+      #jumpButton:hover {
+          background-color: #555;
+          transform: translateY(-2px); /* 鼠标悬停时稍微上移 */
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 增加阴影 */
+      }
+
+      /* 按钮点击样式 */
+      #jumpButton:active {
+          transform: translateY(0); /* 点击时恢复原位 */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 减少阴影 */
+      }

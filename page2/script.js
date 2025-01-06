@@ -49,4 +49,8 @@ function appendNewCard() {
 for (let i = 0; i < 6; i++) {
   appendNewCard();
 }
+        // 按钮点击事件
+        document.getElementById('jumpButton').addEventListener('click', function() {
+          window.location.href = '../index.html';
+      });
 
