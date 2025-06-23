@@ -3,26 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👀zwh的音乐私藏💬🎶🎁</title>
+    <title>🎶 音乐播放器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#EC4899',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div id="media-player">
-        <div id="media-image-container">
-            <!-- 图片会被动态插入 -->
+<body class="bg-gradient-to-br from-dark to-gray-900 min-h-screen text-light font-sans overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 py-8 h-screen flex flex-col">
+        <!-- 播放器标题 -->
+        <div class="text-center mb-8">
+            <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-shadow">
+                音乐播放器
+            </h1>
         </div>
-        <audio id="media-audio" autoplay preload="metadata" loop controls>
-            <!-- 音乐源会被动态设置 -->
-        </audio>
-        <div class="container" onclick="playSound()">
-        <button id="btn-prev" class="button">⏮</button>
-        <button id="btn-next" class="button">⏭</button>
+        
+        <!-- 主播放器区域 -->
+        <div class="flex flex-col md:flex-row flex-1 gap-8">
+            <!-- 左侧：唱片和信息 -->
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 perspective-1000">
+                    <!-- 唱片封面 -->
+                    <div id="record-cover" class="absolute inset-0 bg-cover bg-center rounded-full shadow-3d border-4 border-gray-200 record-spin paused">
+                        <!-- 唱片中心 -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full border-2 border-gray-400 flex items-center justify-center">
+                                <div class="w-4 h-4 bg-gray-300 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 歌曲信息 -->
+                <div class="mt-8 text-center glass-effect rounded-xl p-4 w-full max-w-md">
+                    <h2 id="song-title" class="text-2xl font-bold mb-2">歌曲标题</h2>
+                    <p id="song-artist" class="text-lg text-gray-300 mb-1">艺术家</p>
+                    <p id="song-album" class="text-sm text-gray-400">专辑名称</p>
+                </div>
+            </div>
+            
+            <!-- 右侧：控制器和播放列表 -->
+            <div class="w-full md:w-1/2 flex flex-col">
+                <!-- 控制器 -->
+                <div class="glass-effect rounded-xl p-6 mb-6 shadow-3d">
+                    <!-- 进度条 -->
+                    <div class="mb-6">
+                        <div class="relative h-2 bg-gray-700 rounded-full overflow-hidden">
+                            <div id="progress-bar" class="absolute top-0 left-0 h-full bg-gradient-to-r from-primary to-secondary w-0"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-sm text-gray-400">
+                            <span id="current-time">0:00</span>
+                            <span id="total-time">0:00</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 控制按钮 -->
+                    <div class="flex justify-center items-center gap-6">
+                        <button id="shuffle-btn" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-random text-xl"></i>
+                        </button>
+                        <button id="prev-btn" class="text-2xl hover:text-primary transition-colors">
+                            <i class="fa fa-step-backward"></i>
+                        </button>
+                        <button id="play-btn" class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center shadow-lg hover:shadow-primary/50 transition-all transform hover:scale-105">
+                            <i class="fa fa-play text-2xl text-white"></i>
+                        </button>
+                        <button id="next-btn" class="text-2xl hover:text-primary transition-colors">
+                            <i class="fa fa-step-forward"></i>
+                        </button>
+                        <button id="repeat-btn" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa fa-repeat text-xl"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- 音量控制 -->
+                    <div class="mt-8 flex items-center justify-center gap-3">
+                        <i class="fa fa-volume-up text-gray-400"></i>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="1" 
+                            class="w-32 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
+                    </div>
+                </div>
+                
+                <!-- 播放列表 -->
+                <div class="glass-effect rounded-xl p-6 flex-1 overflow-y-auto shadow-3d">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">播放列表</h3>
+                        <span id="playlist-count" class="text-sm text-gray-400">0 首歌曲</span>
+                    </div>
+                    <ul id="playlist" class="space-y-3"></ul>
+                </div>
+            </div>
         </div>
-        <div><button id="myButton" class="ab">‘📴</button></div>
-        <audio id="clickSound" src="./mt/button.wav"></audio>
     </div>
-    <div id="text-overlay" class="hidden"></div>
-
 
     <script src="scripts.js"></script>
 </body>

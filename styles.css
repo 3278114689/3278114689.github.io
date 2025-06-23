@@ -1,228 +1,43 @@
-/* 确保适应不同的屏幕尺寸 */
-html, body {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
-
-#media-player {
-    position: relative;
-    height: 100%;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5), /* 内深度阴影 */
-                 0px 0px 20px rgba(255,255,255,0.1); /* 外发光效果 */
-    /* 可以调整阴影大小，让3D效果更加明显 */
-    border-radius: 0.1px; /* 添加圆角增强3D效果 */
-    padding: 20px; /* 如果需要可以添加些许内边距来使内容居中 */
-}
-
-/* 添加伪元素模仿深层的3D边框 */
-#media-player::before,
-#media-player::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    /* 添加立体效果和深度 */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    z-index: -1;
-    /* transformed slightly to give more 3D depth */
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-    transition: transform 0.3s ease-out;
-}
-
-/* 当媒体播放器被激活或者是被交互时，伪元素可以产生动画效果 */
-#media-player:hover::before,
-#media-player:hover::after {
-    transform: perspective(1000px) rotateY(5deg) rotateX(3deg);
-}
-
-
-
-#media-audio {
-    width: 100%;
-    height: 55px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-#media-audio::-webkit-media-controls {
-    width: 50%;
-    height: 50px;
-}
-
-#media-audio::-webkit-media-controls-enclosure {
-    width: 100%;
-    height: 100%;
-    background-color: transparent; /* 设置为透明 */
-    border: 1px solid transparent; /* 设置为透明 */
-}
-
-#media-audio::-webkit-media-controls-panel {
-    width: 100%;
-    height: 100%;
-}
-
-#media-audio::-webkit-media-controls-play-button {
-    width: 100%;
-    height: 100px;
-    color: #ffffff;
-    background-color:#fff;
-    border-radius: 50%; /* 将边框半径设置为50%，使元素变成圆形 */
-}
-
-
-
-#media-audio::-webkit-media-controls-volume-slider {
-    color: #fff;
-    background-color:#dee9e49c
-}
-#media-audio::-webkit-media-controls-current-time-display {
-    color: #fff;
-}
-#media-audio::-webkit-media-controls-time-remaining-display {
-    color: #fff;
-}
-
-
-#media-image-container {
-    width: 90%;
-    height: 60%;
-    background-size: cover;
-    background-position: center;
-    border: 3px solid #fff;
-    position: relative;
-    cursor: pointer;
-    perspective: 1000px; /* 为3D变换设置透视效果 */
-    border-radius: 10px; /* 可选：添加圆角以增强3D效果 */
-}
-
-/* 在#media-image-container添加立体效果的伪元素 */
-#media-image-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px; /* 与容器相同的圆角 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 提供更强的深度感阴影效果 */
-    transition: transform 0.5s ease-out; /* 平滑过渡动画 */
-}
-
-/* 为了强化3D效果，在hover状态添加倾斜和缩放 */
-#media-image-container:hover::after {
-    transform: rotateX(15deg) rotateY(15deg);
-}
-
-/* 为容器添加强烈的出挑感阴影 */
-#media-image-container {
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3), /* 更宽的主要阴影 */
-                 0px 15px 40px rgba(0, 0, 0, 0.2), /* 更远的模糊阴影 */
-                 inset 0px 0px 15px rgba(255, 255, 255, 0.1); /* 内部高光 */
-}
-.hidden {
-    display: none;
-}
-
-#media-audio {
-    margin-top: 20px;
-}
-
-/* 把按钮放在另一个盒子里 */
-.container {      
-    display: flex;
-}
-
-.ab {
-    color: #ffffff; /* 文本颜色改为白色以便与立体背景相对比 */
-    background-color: #555; /* 修改为中立的背景颜色 */
-    border: none; /* 移除默认边框 */
-    border-radius: 50%; /* 将边框半径设置为50%，使按钮变成圆形 */
-    position: absolute; /* 设置按钮为绝对定位 */
-    right: 0; /* 将按钮移动到页面的右边缘 */
-    width: 45px;
-    height: 45px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 添加阴影，模拟光照效果 */
-    transform: perspective(100px) rotateX(0deg) rotateY(0deg); /* 设置透视和旋转，创建3D效果 */
-    transition: transform 0.45s ease; /* 添加过渡效果，使变换更加平滑 */
-}
-
-.ab:hover {
-    transform: perspective(100px) rotateX(27deg) rotateY(26deg); /* 鼠标悬停时，按钮增加旋转，增强3D感 */
-}
-
-
-/* 更新按钮的基础样式 */
-.button {
-    padding: 15px 30px;
-    margin: 10px 30px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #fff; /* 文本颜色改为白色以便与立体背景相对比 */
-    background-color: #555; /* 修改为中立的背景颜色 */
-    background-image: linear-gradient(to top, #666, #444); /* 添加渐变背景提高立体感 */
-    border: 1px solid #333; /* 修改边框颜色以适应立体风格 */
-    border-radius: 5px; /* 轻微调整圆角 */
-    cursor: pointer;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1; /* 为了提高层次感，调整z-index */
-
-    /* 添加多层阴影效果来模仿3D效果 */
-    box-shadow: 0 5px #333,  /* 下面的暗影 */
-                0 10px 20px rgba(0, 0, 0, 0.5);  /* 散射的阴影 */
-}
-
-/* 修改激活状态下按钮的样式 */
-button:active {
-    transform: translateY(4px); /* 按钮被按下时轻微下移 */
-    box-shadow: 0 1px #333; /* 按下去的时候暗影减小 */
-}
-
-#text-overlay {
-    position: absolute;
-    top: 0;
-    width: 90%;
-    height: 60%;
-    background: transparent;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    transition: transform 0.6s;
-    font-family: 'Arial Black', Gadget, sans-serif;
-}
-
-
-
-#media-image-container, #text-overlay {
-    backface-visibility: hidden;
-    transition: transform 0.7s;
-    transition-timing-function: ease-out;
-}
-
-#media-image-container.flipped {
-    transform: rotateY(180deg);
-}
-
-#text-overlay.flipped {
-    transform: rotateY(0deg);
+@layer utilities {
+    .content-auto {
+        content-visibility: auto;
+    }
+    .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .rotate-y-180 {
+        transform: rotateY(180deg);
+    }
+    .preserve-3d {
+        transform-style: preserve-3d;
+    }
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
+    .perspective-1000 {
+        perspective: 1000px;
+    }
+    .transition-transform {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+    .shadow-3d {
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+    }
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .record-spin {
+        animation: spin 20s linear infinite;
+    }
+    .paused {
+        animation-play-state: paused;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
 }
