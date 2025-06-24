@@ -246,6 +246,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const playlistElement = document.getElementById('playlist');
     const playlistCount = document.getElementById('playlist-count');
     
+    
+
+
+
     // 状态变量
     let currentTrackIndex = 0;
     let isPlaying = false;
